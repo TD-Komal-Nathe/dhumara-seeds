@@ -126,7 +126,7 @@
 }
 
 .stat-text {
-  font-size: 0.85rem;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.2;
   color: var(--dark-green);
