@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 8rem 0 4rem;
+  padding: 6rem 0 4rem;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -134,7 +134,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 6rem 0 3rem;
+    padding: 4rem 0 3rem;
   }
   
   .hero-overlay {

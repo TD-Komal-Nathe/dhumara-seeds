@@ -90,7 +90,7 @@ button {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 3.8rem;
 }
 
 .section-padding {
@@ -109,7 +109,7 @@ button {
     padding: 0.55rem 1.2rem;
     border-radius: 9999px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     gap: 0.5rem;
     transition: var(--transition);
 }
