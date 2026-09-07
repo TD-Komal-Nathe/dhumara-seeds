@@ -2,11 +2,11 @@ import { ArrowRight } from 'lucide-react';
 import './Gallery.css';
 
 const galleryImages = [
-  { id: 1, title: 'Seeds', size: 'small', src: '/about-seeds.jpg' },
-  { id: 2, title: 'Fresh Produce', size: 'medium', src: '/watermelon-product.jpg' },
-  { id: 3, title: 'Pratap Growth', size: 'large', src: '/pratap_watermelons_gallery.jpg' },
-  { id: 4, title: 'Quality Harvest', size: 'medium', src: '/muskmelon-product.jpg' },
-  { id: 5, title: 'Rubi Muskmelon', size: 'small', src: '/rubi_muskmelons_gallery.jpg' },
+  { id: 1, title: 'Seeds', size: 'small', src: `${import.meta.env.BASE_URL}about-seeds.jpg` },
+  { id: 2, title: 'Fresh Produce', size: 'medium', src: `${import.meta.env.BASE_URL}watermelon-product.jpg` },
+  { id: 3, title: 'Pratap Growth', size: 'large', src: `${import.meta.env.BASE_URL}pratap_watermelons_gallery.jpg` },
+  { id: 4, title: 'Quality Harvest', size: 'medium', src: `${import.meta.env.BASE_URL}muskmelon-product.jpg` },
+  { id: 5, title: 'Rubi Muskmelon', size: 'small', src: `${import.meta.env.BASE_URL}rubi_muskmelons_gallery.jpg` },
 ];
 
 const Gallery = () => {

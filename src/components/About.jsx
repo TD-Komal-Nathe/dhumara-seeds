@@ -7,7 +7,7 @@ const About = () => {
       <div className="container about-container">
         <div className="about-image-wrapper" data-aos="fade-right">
           <img 
-            src="/about-seeds.jpg" 
+            src={`${import.meta.env.BASE_URL}about-seeds.jpg`} 
             alt="Farmer holding seeds" 
             className="about-img"
           />
@@ -46,7 +46,7 @@ const About = () => {
             </li>
           </ul>
           
-          <a href="/Dhumara-Seeds-Brochure.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline about-btn" data-aos="fade-up" data-aos-delay="500">
+          <a href={`${import.meta.env.BASE_URL}Dhumara-Seeds-Brochure.pdf`} target="_blank" rel="noopener noreferrer" className="btn btn-outline about-btn" data-aos="fade-up" data-aos-delay="500">
             Learn More <ArrowRight size={18} />
           </a>
         </div>

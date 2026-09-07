@@ -12,7 +12,7 @@ const BrandVision = () => {
           </div>
         </div>
 
-        <div className="brand-parallax-text" data-aos="zoom-in" data-aos-duration="1200">
+        <div className="brand-parallax-text" data-aos="zoom-in" data-aos-duration="1200" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}green-texture.jpg)` }}>
           DHUMARA SEEDS PVT. LTD.
         </div>
 

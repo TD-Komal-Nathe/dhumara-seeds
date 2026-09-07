@@ -14,9 +14,9 @@ const productsData = [
       geneticPurity: '95% (Min)'
     },
     features: ['Excellent Fruit Size', 'Deep Red Flesh', 'High Yield', 'Disease Resistant'],
-    mainImage: '/watermelon-product.jpg',
-    seedImage: '/watermelon-seeds.jpg',
-    pdfUrl: '/Dhumara_seeds_Watermelon.pdf'
+    mainImage: `${import.meta.env.BASE_URL}watermelon-product.jpg`,
+    seedImage: `${import.meta.env.BASE_URL}watermelon-seeds.jpg`,
+    pdfUrl: `${import.meta.env.BASE_URL}Dhumara_seeds_Watermelon.pdf`
   },
   {
     id: 2,
@@ -30,9 +30,9 @@ const productsData = [
       geneticPurity: '95% (Min)'
     },
     features: ['Sweet Taste', 'Rich Aroma', 'Uniform Fruit Shape', 'High Germination'],
-    mainImage: '/muskmelon-product.jpg',
-    seedImage: '/muskmelon-seeds.jpg',
-    pdfUrl: '/Dhumara_seeds_Muskmelon.pdf'
+    mainImage: `${import.meta.env.BASE_URL}muskmelon-product.jpg`,
+    seedImage: `${import.meta.env.BASE_URL}muskmelon-seeds.jpg`,
+    pdfUrl: `${import.meta.env.BASE_URL}Dhumara_seeds_Muskmelon.pdf`
   }
 ];
 

@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-background">
         <div className="hero-overlay"></div>
         <img 
-          src="/hero-banner.jpg" 
+          src={`${import.meta.env.BASE_URL}hero-banner.jpg`} 
           alt="Agricultural Field with Watermelon and Muskmelon" 
           className="hero-bg-img"
         />
