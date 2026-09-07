@@ -1,0 +1,115 @@
+.brand-vision {
+  position: relative;
+  min-height: 40vh;
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+  overflow: hidden;
+  text-align: center;
+}
+
+.brand-vision-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.brand-logo-wrapper {
+  margin-bottom: -1rem;
+}
+
+.brand-icon-circle {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+  position: relative;
+}
+
+.brand-icon-circle::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px dashed var(--primary-green);
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.brand-parallax-text {
+  /* Dynamic font size for responsiveness */
+  font-size: clamp(2.15rem, 6.3vw, 5.7rem);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 0;
+  
+  /* The core parallax clipping effect */
+  background-image: url('/green-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* This makes the image static while the text scrolls over it */
+  
+  /* Clip the background to the text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  color: transparent;
+  
+  /* Drop shadow trick for background-clip text */
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.15));
+}
+
+.brand-tagline-wrapper {
+  margin-top: 1rem;
+}
+
+.brand-tagline {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-family: var(--font-heading);
+  color: var(--dark-green);
+  font-weight: 600;
+}
+
+.brand-tagline span {
+  color: var(--light-orange);
+  font-style: italic;
+}
+
+/* Fallback/Adjustment for mobile devices where fixed background attachment is notoriously buggy */
+@media (max-width: 768px) {
+  .brand-parallax-text {
+    background-attachment: scroll; /* Disables parallax on mobile to prevent glitches */
+    letter-spacing: 0;
+  }
+  
+  .brand-icon-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .brand-icon-circle .brand-leaf-icon {
+    width: 36px;
+    height: 36px;
+  }
+}

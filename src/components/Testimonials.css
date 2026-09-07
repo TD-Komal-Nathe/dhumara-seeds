@@ -1,0 +1,112 @@
+.testimonials-slider-wrapper {
+  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+}
+
+.testimonials-swiper {
+  padding-bottom: 3rem !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--primary-green) !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background-color: var(--primary-green) !important;
+}
+
+.swiper-slide {
+  height: auto; /* Allow equal heights */
+  padding-top: 20px; /* Space for the floating quote icon */
+}
+
+.testimonial-card {
+  background-color: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Fill slide height */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.quote-icon-wrapper {
+  position: absolute;
+  top: -20px;
+  left: 2rem;
+  background-color: var(--light-orange);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.quote-icon {
+  color: var(--white);
+}
+
+.testimonial-text {
+  color: var(--text-dark);
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.author-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--light-green);
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.author-role {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.1rem;
+}
+
+.author-mobile {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.8;
+}
+
+.stars {
+  display: flex;
+  gap: 0.1rem;
+}
