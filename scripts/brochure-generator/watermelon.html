@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermelon Brochure - Pratap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e5e7eb;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            page-break-after: always;
+        }
+        @media print {
+            body { background: white; }
+            .a4-page { box-shadow: none; margin: 0; }
+        }
+        /* Geometric Background Elements for Page 1 */
+        .bg-shape-1 {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 60%;
+            height: 40%;
+            background: radial-gradient(circle, rgba(21, 128, 61, 0.15) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .bg-shape-2 {
+            position: absolute;
+            bottom: -5%;
+            right: -10%;
+            width: 70%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center py-8 gap-8 print:py-0 print:gap-0">
+
+    <!-- PAGE 1: FRONT COVER -->
+    <div class="a4-page flex flex-col items-center justify-between p-16 bg-gradient-to-br from-green-50 to-white">
+        <div class="bg-shape-1"></div>
+        <div class="bg-shape-2"></div>
+        
+        <div class="w-full relative z-10 flex flex-col items-center h-full">
+            <!-- Brand / Logo -->
+            <div class="flex items-center justify-center gap-4 mt-8 mb-16">
+                <div class="bg-green-700 text-white p-3 rounded-full shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                </div>
+                <h1 class="text-5xl font-black text-green-900 tracking-widest uppercase">Dumara Seeds</h1>
+            </div>
+
+            <!-- Product Image -->
+            <div class="w-full h-[450px] rounded-[3rem] overflow-hidden shadow-2xl mb-12 border-8 border-white relative group">
+                <img src="../../public/watermelon-product.jpg" alt="Watermelon Pratap" class="w-full h-full object-cover transform scale-105" />
+                <div class="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,0.1)] rounded-[2.5rem]"></div>
+            </div>
+
+            <!-- Title & Badges -->
+            <div class="text-center w-full flex-grow flex flex-col items-center justify-center">
+                <h2 class="text-7xl font-black text-green-800 tracking-tight mb-6 drop-shadow-sm">PRATAP</h2>
+                
+                <div class="flex items-center justify-center gap-4 mb-8">
+                    <span class="bg-green-700 text-white px-8 py-3 rounded-full text-2xl font-bold tracking-widest shadow-md">WATERMELON</span>
+                    <span class="bg-white border-2 border-green-700 text-green-700 px-8 py-3 rounded-full text-2xl font-bold tracking-widest shadow-sm">F1 HYBRID</span>
+                </div>
+
+                <div class="text-3xl font-bold text-green-900 mb-16 flex items-center gap-4">
+                    <span>Dark Green</span>
+                    <span class="text-green-500">•</span>
+                    <span>Firm Rind</span>
+                    <span class="text-green-500">•</span>
+                    <span>High Yield</span>
+                </div>
+
+                <!-- Footer Specs -->
+                <div class="w-full flex justify-between items-center px-4 mt-auto border-t-2 border-green-200 pt-8">
+                    <div class="flex gap-4">
+                        <div class="bg-white px-6 py-3 rounded-xl shadow border border-green-100 flex items-center gap-2">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-green-800 font-bold text-lg uppercase tracking-wide">High Germination</span>
+                        </div>
+                        <div class="bg-white px-6 py-3 rounded-xl shadow border border-green-100 flex items-center gap-2">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"></path></svg>
+                            <span class="text-green-800 font-bold text-lg uppercase tracking-wide">Treated Seeds</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-gray-500">
+                        Net Qty: <span class="text-green-700 text-3xl ml-2">50 g</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: BACK LABEL -->
+    <div class="a4-page p-16 flex flex-col bg-white">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-black text-green-900 tracking-widest border-b-4 border-green-700 inline-block pb-4 px-12">PRODUCT LABEL</h2>
+        </div>
+
+        <div class="grid grid-cols-12 gap-12 flex-grow relative">
+            <!-- Divider line -->
+            <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 transform -translate-x-1/2 hidden lg:block"></div>
+
+            <!-- Left Column: Specs -->
+            <div class="col-span-7 space-y-7 text-[1.1rem]">
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">KIND / CROP</span>
+                    <span class="font-black text-green-900 text-xl">HYBRID WATERMELON SEED</span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">VARIETY</span>
+                    <span class="font-black text-green-900 text-xl">PRATAP</span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">LABEL NO.</span>
+                    <span class="w-32 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">LOT NO.</span>
+                    <span class="w-48 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">DATE, MONTH & YEAR OF TEST</span>
+                    <span class="w-40 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">DATE OF PACKING</span>
+                    <span class="w-40 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">VALID UPTO</span>
+                    <span class="w-40 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">NET WEIGHT</span>
+                    <span class="w-32 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">NET QUANTITY</span>
+                    <span class="w-32 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">MRP Rs. (Incl. of all taxes)</span>
+                    <span class="w-32 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="font-bold text-gray-500 tracking-wide">UNIT SALE PRICE Rs.</span>
+                    <span class="w-32 border-b border-gray-400 border-dashed"></span>
+                </div>
+                <div class="flex justify-between items-end pt-2">
+                    <span class="font-bold text-gray-500 tracking-wide">COUNTRY OF ORIGIN</span>
+                    <span class="font-black text-green-900 text-xl">INDIA</span>
+                </div>
+            </div>
+
+            <!-- Right Column: Details -->
+            <div class="col-span-5 flex flex-col gap-8">
+                
+                <!-- Quality Card -->
+                <div class="bg-green-50 p-6 rounded-2xl border border-green-100 shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-5 uppercase tracking-wider flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        Quality Standard
+                    </h3>
+                    <div class="space-y-4 text-lg">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-700">Germination (Min.)</span>
+                            <span class="font-bold text-green-900 bg-white px-4 py-1 rounded-lg shadow-sm">60%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-700">Physical Purity (Min.)</span>
+                            <span class="font-bold text-green-900 bg-white px-4 py-1 rounded-lg shadow-sm">98%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-700">Genetic Purity (Min.)</span>
+                            <span class="font-bold text-green-900 bg-white px-4 py-1 rounded-lg shadow-sm">95%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-700">Moisture (Max.)</span>
+                            <span class="font-bold text-green-900 bg-white px-4 py-1 rounded-lg shadow-sm">6%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultivation Card -->
+                <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4 uppercase tracking-wider flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Cultivation Info
+                    </h3>
+                    <div class="text-[1.1rem] text-gray-700 mb-4">
+                        <span class="font-bold">Chemical Used:</span> <span class="bg-white px-2 py-1 rounded shadow-sm font-semibold ml-2">METALAXYL</span>
+                    </div>
+                    <div class="font-bold text-blue-900 mb-2">Recommended Area & Season:</div>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-1 font-medium">
+                        <li>RABI: <span class="text-blue-900">MS</span></li>
+                        <li>L. KHRIF: <span class="text-blue-900">MS</span></li>
+                        <li>E. SUMMER: <span class="text-blue-900">MS</span></li>
+                    </ul>
+                </div>
+
+                <!-- Storage Info -->
+                <div class="flex items-center gap-4 text-amber-700 bg-amber-50 p-5 rounded-2xl border border-amber-200 mt-auto">
+                    <svg class="w-8 h-8 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <span class="font-bold text-lg leading-snug">Store in a cool & dry place, away from direct sunlight.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-12 pt-8 flex flex-col items-center border-t border-gray-200">
+            <div class="flex items-center justify-center gap-3 mb-2">
+                <div class="bg-green-700 text-white p-2 rounded-full shadow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                </div>
+                <h3 class="text-2xl font-black text-green-900 tracking-widest uppercase">Dumara Seeds Pvt. Ltd.</h3>
+            </div>
+            
+            <p class="text-gray-600 text-lg font-medium text-center mb-1">A/P - Saundare, Tal - Barshi, Dist - Solapur, Maharashtra. 413401</p>
+            <p class="text-gray-800 font-bold text-lg mb-8">
+                Customer care: <span class="text-green-700">+91 97307 21626</span> 
+                <span class="mx-3 text-gray-300">|</span> 
+                Email: <span class="text-green-700">info@dhumaraseeds.com</span>
+            </p>
+
+            <!-- Warning Banner -->
+            <div class="w-full bg-red-50 border-2 border-red-500 rounded-xl p-4 flex items-center justify-center gap-4 shadow-sm">
+                <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                <span class="font-black text-[1.1rem] tracking-wider text-red-700 uppercase">
+                    Seeds treated with poison. Do not use for food, feed or oil purposes.
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

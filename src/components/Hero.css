@@ -49,7 +49,7 @@
   color: var(--primary-green);
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 1.25rem;
+  font-size: 16px;
   margin-bottom: 1rem;
 }
 
@@ -58,11 +58,11 @@
 }
 
 .hero-title {
-  font-size: 4.5rem;
-  font-weight: 800;
-  color: var(--dark-green);
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--dark-green);
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
 }
 
 .highlight-orange {
@@ -72,16 +72,16 @@
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-dark);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
