@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import './Contact.css';
 
-const OWNER_WHATSAPP = "917499070439";
+const OWNER_WHATSAPP = "919730721626";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
