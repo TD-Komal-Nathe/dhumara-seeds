@@ -99,7 +99,7 @@ const Testimonials = () => {
                     <div className="author-info">
                       <h4 className="author-name">{testimonial.name}</h4>
                       <span className="author-role">{testimonial.role}</span>
-                      <span className="author-mobile">Mobile: {testimonial.mobile}</span>
+                      {/* <span className="author-mobile">Mobile: {testimonial.mobile}</span> */}
                       <div className="stars">
                         {[1, 2, 3, 4, 5].map(star => (
                           <Star key={star} size={14} fill="#E9A25A" color="#E9A25A" />
